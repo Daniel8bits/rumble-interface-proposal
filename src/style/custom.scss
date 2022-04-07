@@ -1,0 +1,64 @@
+@use "sass:math";
+@use "sass:map";
+
+/* Variables */
+
+$theme: (
+  "green1": "#01fe42",
+  "green2": "#008800",
+  
+  "blue1": "#00ffd1",
+  "blue2": "#00a3ff",
+
+  "red1": "#ff4343",
+  "orange1": "#ff9900",
+
+  "gray1": "#888888",
+  "gray2": "#222222",
+  "gray3": "#dddddd",
+  "gray4": "#111111",
+  "gray5": "#555555",
+);
+
+
+:root {
+  @each $k in map-keys($theme) {
+    --#{$k}-color: #{map-get($theme, $k)};
+  }
+}
+
+
+@each $t in map-keys($theme) {
+
+  /* Text color */
+  .text-#{$t} {
+      color: var(--#{$t}-color)
+  }
+  .hover\:text-#{$t}:hover {
+      color: var(--#{$t}-color);
+  }
+  /* Background color */
+  .bg-#{$t} {
+      background-color: var(--#{$t}-color)
+  }
+  .hover\:bg-#{$t}:hover {
+      background-color: var(--#{$t}-color);
+  }
+  /* Border color */
+  .border-#{$t} {
+      border-color: var(--#{$t}-color)
+  }
+  .hover\:border-#{$t}:hover {
+      border-color: var(--#{$t}-color);
+  }
+
+}
+
+.border-search {
+  //border: 2px solid linear-gradient(90deg, var(--green1-color) 0%, var(--gray5-color) 100%);
+
+  background: 
+    linear-gradient(var(--gray2-color), var(--gray2-color)) padding-box,
+    linear-gradient(to right, var(--green1-color), var(--gray5-color)) border-box;
+  border: 2px solid transparent;
+}
