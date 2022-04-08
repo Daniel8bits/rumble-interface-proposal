@@ -7,7 +7,7 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = (props) => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <TopMenu  />
       <main>
         {props.children}

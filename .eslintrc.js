@@ -49,7 +49,8 @@ module.exports = {
       '@typescript-eslint/explicit-member-accessibility': 'off',
       '@typescript-eslint/no-empty-interface': 'off',
       'react/function-component-definition': 'off',
-      'react/destructuring-assignment': 'off'
+      'react/destructuring-assignment': 'off',
+      'react/require-default-props': 'off'
     },
     settings: {
       'import/parsers': {

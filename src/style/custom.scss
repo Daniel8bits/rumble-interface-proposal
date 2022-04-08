@@ -18,6 +18,7 @@ $theme: (
   "gray3": "#dddddd",
   "gray4": "#111111",
   "gray5": "#555555",
+  "gray6": "#aaaaaa"
 );
 
 
@@ -59,6 +60,14 @@ $theme: (
 
   background: 
     linear-gradient(var(--gray2-color), var(--gray2-color)) padding-box,
-    linear-gradient(to right, var(--green1-color), var(--gray5-color)) border-box;
+    linear-gradient(to right, var(--green1-color), var(--gray6-color)) border-box;
   border: 2px solid transparent;
+}
+
+.button-skew {
+  transform: skew(-15deg);
+}
+
+.button-skew-inner {
+  transform: skew(15deg);
 }
