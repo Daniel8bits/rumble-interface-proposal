@@ -2,7 +2,8 @@ import React from 'react';
 import FlexLayout from '@layouts/FlexLayout';
 import {
   MdMic,
-  MdArrowDropDown
+  MdArrowDropDown,
+  MdSearch
 } from 'react-icons/md'
 
 interface SearchBarProps {
@@ -21,19 +22,22 @@ const SearchBar: React.FC<SearchBarProps> = () => {
       >
         <button 
           type="button" 
-          className="appearance-none pl-4 pr-2 h-full flex justify-center items-center"
+          className="appearance-none pl-4 pr-2 h-full flex justify-center items-center text-sm"
         > 
           Videos 
-          <MdArrowDropDown className="ml-2 h-12 text-[20px]"  />
+          <MdArrowDropDown className="ml-2"  />
         </button>
         <input 
           type="text" 
-          className="appearance-none bg-transparent outline-none pl-4 border-l-2 border-l-[#aaa] text-white" 
+          className="appearance-none bg-transparent outline-none px-4 border-l-2 border-l-[#aaa] text-white grow" 
         />
+        <button type="button" className="py-2 px-4 hover:bg-green1 hover:text-gray2 rounded-full">
+          <MdSearch  />
+        </button>
       </FlexLayout>
       <button 
         type="button" 
-        className="appearance-none w-[40px] h-[40px] bg-gray2 border-2 border-gray6 rounded-full ml-2 flex justify-center items-center"
+        className="appearance-none w-[40px] h-[40px] bg-gray2 hover:bg-green1 hover:text-gray2 border-2 border-gray6 rounded-full ml-2 flex justify-center items-center"
       > 
         <MdMic  />
       </button>

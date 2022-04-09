@@ -33,24 +33,30 @@ $theme: (
 
   /* Text color */
   .text-#{$t} {
-      color: var(--#{$t}-color)
+    color: var(--#{$t}-color)
   }
   .hover\:text-#{$t}:hover {
-      color: var(--#{$t}-color);
+    color: var(--#{$t}-color);
+  }
+  .group:hover .group-hover\:text-#{$t} {
+    color: var(--#{$t}-color);
   }
   /* Background color */
   .bg-#{$t} {
-      background-color: var(--#{$t}-color)
+    background-color: var(--#{$t}-color)
   }
   .hover\:bg-#{$t}:hover {
-      background-color: var(--#{$t}-color);
+    background-color: var(--#{$t}-color);
   }
   /* Border color */
   .border-#{$t} {
-      border-color: var(--#{$t}-color)
+    border-color: var(--#{$t}-color)
   }
   .hover\:border-#{$t}:hover {
-      border-color: var(--#{$t}-color);
+    border-color: var(--#{$t}-color);
+  }
+  .group:hover .group-hover\:border-#{$t} {
+    border-color: var(--#{$t}-color);
   }
 
 }
@@ -70,4 +76,24 @@ $theme: (
 
 .button-skew-inner {
   transform: skew(15deg);
+}
+
+.font-roboto {
+  font-family: 'Roboto';
+}
+
+.topmenu-rightside-bg-color {
+  background-image: linear-gradient(to right, transparent 0, var(--green1-color) 100%);
+}
+
+.topmenu-border-color {
+  border-image: linear-gradient(to right, transparent 50%, var(--green1-color) 100%) 1;
+}
+
+.sidemenu-height {
+  height: calc(100vh - 60px);
+}
+
+.content-margin-fix {
+  margin-top: -8px;
 }
