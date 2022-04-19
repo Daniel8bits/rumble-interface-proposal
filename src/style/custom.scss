@@ -97,3 +97,11 @@ $theme: (
 .content-margin-fix {
   margin-top: -8px;
 }
+
+.text-h1 {
+  font-size: 3em;
+}
+
+.content-container-height {
+  height: calc(100vh - 68px);
+}

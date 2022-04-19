@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import TopMenu from '@components/topMenu/TopMenu'
 import SideMenu from '@components/sideMenu/SideMenu';
 import FlexLayout from '@layouts/FlexLayout';
+import SimpleBar from 'simplebar-react';
 
 interface MainLayoutProps {
 }
@@ -20,9 +21,16 @@ const MainLayout: React.FC<MainLayoutProps> = (props) => {
         className="content-margin-fix"
       >
         <SideMenu open={openSideMenu}  />
-        <main className="grow">
-          {props.children}
-        </main>
+        <div className="grow content-container-height overflow-hidden mt-2">
+          <SimpleBar style={{ 
+            width: "100%",
+            maxHeight: 'calc(100vh - 68px)' 
+          }}>
+            <main className="w-full flex justify-center">
+              {props.children}
+            </main>
+          </SimpleBar>
+        </div>
       </FlexLayout>
     </div>
   );

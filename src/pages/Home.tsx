@@ -10,8 +10,10 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = () => {
   return (
     <MainLayout>
-      <Header  />
-      <Recommended  />
+      <div className="w-[78vw]">
+        <Header  />
+        <Recommended  />
+      </div>
     </MainLayout>
   );
 };

@@ -26,7 +26,11 @@ const RightSide: React.FC<RightSideProps> = () => {
           <MdNotifications className='text-green1 group-hover:text-gray2 m-2'  />
         </StyledButton>
         <StyledButton className="bg-black w-[70px] h-[60px] group hover:bg-white">
-          <Avatar className='m-2 border-2 border-transparent group-hover:border-gray2 box-content'  />
+          <Avatar 
+            src="/assets/tanjiro.jpg"
+            alt="profile"
+            className='m-2 border-2 border-transparent group-hover:border-gray2 box-content'  
+          />
         </StyledButton>
       </FlexLayout>
     </FlexLayout>
